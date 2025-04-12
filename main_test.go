@@ -7,11 +7,11 @@ import (
 	common_suite "github.com/totoyk/golang-testing-recap/suite"
 )
 
-type TestSuite struct {
+type MainTestSuite struct {
 	common_suite.BaseSuite
 }
 
-func (s *TestSuite) TestAdd() {
+func (s *MainTestSuite) TestAdd() {
 	tests := []struct {
 		name     string
 		a, b     int
@@ -34,6 +34,6 @@ func (s *TestSuite) TestAdd() {
 	}
 }
 
-func TestAddTestSuite(t *testing.T) {
-	suite.Run(t, new(TestSuite))
+func TestMainTestSuite(t *testing.T) {
+	suite.Run(t, new(MainTestSuite))
 }
